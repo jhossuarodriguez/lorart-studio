@@ -1,0 +1,23 @@
+---
+import { Image } from "astro:assets";
+import background from "../assets/background.webp";
+---
+
+<div class="">
+    <Image
+        loading={"eager"}
+        class="object-cover h-5 w-full border-b border-secondary z-10"
+        src={background}
+        layout="responsive"
+        alt="Banner Lorart"
+    />
+
+    <Image
+    loading={"eager"}
+    class="absolute top-0 -z-10"
+    src={background}
+    layout="responsive"
+    alt="Banner Lorart"
+/>
+    
+</div>
