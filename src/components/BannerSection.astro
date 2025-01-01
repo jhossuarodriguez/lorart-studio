@@ -1,23 +1,22 @@
 ---
-import { Image } from "astro:assets";
-import background from "../assets/background.webp";
+import Banner from "@/assets/icons/banner.astro";
+import DownloadIcon from "@/assets/icons/download_logo.svg";
 ---
 
-<div class="">
-    <Image
-        loading={"eager"}
-        class="object-cover h-5 w-full border-b border-secondary z-10"
-        src={background}
-        layout="responsive"
-        alt="Banner Lorart"
-    />
+<div class="flex justify-center h-full">
+    <Banner class="-z-10 border-b border-secondary absolute" />
+    <div class="flex justify-center items-center z-10 absolute right-5">
+        <button
+            class="flex justify-center items-center flex-row mt-5 bg-black px-5 py-4 text-white rounded transition-transform duration-300 hover:scale-110 gap-x-2"
+            >CV AQUI <DownloadIcon class="w-6" />
+        </button>
+    </div>
 
-    <Image
-    loading={"eager"}
-    class="absolute top-0 -z-10"
-    src={background}
-    layout="responsive"
-    alt="Banner Lorart"
-/>
-    
+    <div class="flex justify-end items-center">
+        <h1
+            class="flex justify-center items-center w-1/2 text-3xl font-bold uppercase"
+        >
+            Los mejores servicios de arquitectura y diseño de interiores
+        </h1>
+    </div>
 </div>
